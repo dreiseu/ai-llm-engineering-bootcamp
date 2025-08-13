@@ -1,0 +1,97 @@
+<svg viewBox="0 0 600 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title-text { font-family: Arial, sans-serif; font-size: 20px; font-weight: bold; fill: #333; }
+      .agent-text { font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #333; }
+      .desc-text { font-family: Arial, sans-serif; font-size: 11px; fill: #555; }
+      .model-text { font-family: Arial, sans-serif; font-size: 10px; fill: #666; font-style: italic; }
+      .arrow { stroke: #666; stroke-width: 2; fill: #666; }
+      .manager-box { fill: #f3e5f5; stroke: #9c27b0; stroke-width: 3; }
+      .planner-box { fill: #fde7e7; stroke: #e57373; stroke-width: 3; }
+      .search-box { fill: #e3f2fd; stroke: #42a5f5; stroke-width: 3; }
+      .writer-box { fill: #e8f5e8; stroke: #66bb6a; stroke-width: 3; }
+      .output-box { fill: #e1f5fe; stroke: #26c6da; stroke-width: 3; }
+    </style>
+  </defs>
+  
+  <!-- Title -->
+  <text x="300" y="25" text-anchor="middle" class="title-text">OpenAI Research Bot - Agent Flow</text>
+  
+  <!-- Research Manager -->
+  <rect x="200" y="50" width="200" height="60" rx="10" class="manager-box"/>
+  <text x="300" y="70" text-anchor="middle" class="agent-text">📋 Research Manager</text>
+  <text x="300" y="85" text-anchor="middle" class="desc-text">Orchestrates workflow</text>
+  <text x="300" y="100" text-anchor="middle" class="desc-text">Manages progress display</text>
+  
+  <!-- Arrow 1 -->
+  <path d="M300 120 L300 140" class="arrow"/>
+  <polygon points="295,140 300,150 305,140" class="arrow"/>
+  <text x="320" y="135" class="desc-text">User Query</text>
+  
+  <!-- Planner Agent -->
+  <rect x="175" y="160" width="250" height="80" rx="10" class="planner-box"/>
+  <text x="300" y="180" text-anchor="middle" class="agent-text">🧠 Planner Agent</text>
+  <text x="300" y="195" text-anchor="middle" class="model-text">Model: GPT-4.1</text>
+  <text x="300" y="210" text-anchor="middle" class="desc-text">Breaks down query into 5-20 search terms</text>
+  <text x="300" y="225" text-anchor="middle" class="desc-text">Creates structured WebSearchPlan</text>
+  
+  <!-- Arrow 2 -->
+  <path d="M300 250 L300 270" class="arrow"/>
+  <polygon points="295,270 300,280 305,270" class="arrow"/>
+  <text x="320" y="265" class="desc-text">Search Plan</text>
+  
+  <!-- Search Agents -->
+  <rect x="175" y="290" width="250" height="100" rx="10" class="search-box"/>
+  <text x="300" y="310" text-anchor="middle" class="agent-text">🔍 Search Agents (Parallel)</text>
+  <text x="300" y="325" text-anchor="middle" class="model-text">Model: GPT-4.1 + WebSearchTool</text>
+  <text x="300" y="340" text-anchor="middle" class="desc-text">Execute searches in batches of 5</text>
+  <text x="300" y="355" text-anchor="middle" class="desc-text">Generate concise summaries</text>
+  
+  <!-- Parallel Search Instances -->
+  <rect x="50" y="370" width="80" height="30" rx="5" fill="#bbdefb" stroke="#1976d2"/>
+  <text x="90" y="388" text-anchor="middle" class="desc-text">Agent 1</text>
+  
+  <rect x="140" y="370" width="80" height="30" rx="5" fill="#bbdefb" stroke="#1976d2"/>
+  <text x="180" y="388" text-anchor="middle" class="desc-text">Agent 2</text>
+  
+  <rect x="230" y="370" width="80" height="30" rx="5" fill="#bbdefb" stroke="#1976d2"/>
+  <text x="270" y="388" text-anchor="middle" class="desc-text">Agent 3</text>
+  
+  <rect x="320" y="370" width="80" height="30" rx="5" fill="#bbdefb" stroke="#1976d2"/>
+  <text x="360" y="388" text-anchor="middle" class="desc-text">Agent 4</text>
+  
+  <rect x="410" y="370" width="80" height="30" rx="5" fill="#bbdefb" stroke="#1976d2"/>
+  <text x="450" y="388" text-anchor="middle" class="desc-text">Agent 5</text>
+  
+  <!-- Arrow 3 -->
+  <path d="M300 410 L300 430" class="arrow"/>
+  <polygon points="295,430 300,440 305,430" class="arrow"/>
+  <text x="330" y="425" class="desc-text">Research Summaries</text>
+  
+  <!-- Writer Agent -->
+  <rect x="175" y="450" width="250" height="80" rx="10" class="writer-box"/>
+  <text x="300" y="470" text-anchor="middle" class="agent-text">✍️ Writer Agent</text>
+  <text x="300" y="485" text-anchor="middle" class="model-text">Model: o3-mini (Reasoning)</text>
+  <text x="300" y="500" text-anchor="middle" class="desc-text">Synthesizes research into report</text>
+  <text x="300" y="515" text-anchor="middle" class="desc-text">Creates outline → content → follow-ups</text>
+  
+  <!-- Arrow 4 -->
+  <path d="M300 540 L300 560" class="arrow"/>
+  <polygon points="295,560 300,570 305,560" class="arrow"/>
+  <text x="320" y="555" class="desc-text">Final Report</text>
+  
+  <!-- Final Output -->
+  <rect x="175" y="580" width="250" height="80" rx="10" class="output-box"/>
+  <text x="300" y="600" text-anchor="middle" class="agent-text">📊 Complete Report</text>
+  <text x="300" y="620" text-anchor="middle" class="desc-text">• Short summary</text>
+  <text x="300" y="635" text-anchor="middle" class="desc-text">• Detailed markdown report</text>
+  <text x="300" y="650" text-anchor="middle" class="desc-text">• 5 follow-up questions</text>
+  
+  <!-- Key Features Box -->
+  <rect x="50" y="680" width="500" height="100" rx="5" fill="#f5f5f5" stroke="#ccc"/>
+  <text x="60" y="700" class="agent-text">🔑 Key Features:</text>
+  <text x="60" y="720" class="desc-text">• Parallel Execution: Multiple search agents work concurrently (max 5)</text>
+  <text x="60" y="735" class="desc-text">• Structured Outputs: Pydantic models for reliable data exchange</text>
+  <text x="60" y="750" class="desc-text">• Error Handling: Failed searches don't stop the process</text>
+  <text x="60" y="765" class="desc-text">• Progress Tracking: Real-time updates via Rich console</text>
+</svg>
