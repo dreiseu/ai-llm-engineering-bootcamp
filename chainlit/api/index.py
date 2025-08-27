@@ -1,11 +1,17 @@
-from chainlit import run_app
 import os
 import sys
+from pathlib import Path
 
 # Add the parent directory to the Python path so we can import app
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+parent_dir = str(Path(__file__).parent.parent)
+sys.path.insert(0, parent_dir)
 
-from app import *
+# Import chainlit after setting up the path
+import chainlit as cl
+from chainlit.server import app as chainlit_app
 
-# This creates the ASGI application that Vercel can serve
-app = run_app("app.py", headless=True)
+# Import our app module to register the handlers
+import app
+
+# Export the ASGI application for Vercel
+app = chainlit_app
