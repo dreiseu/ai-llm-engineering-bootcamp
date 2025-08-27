@@ -211,3 +211,5 @@ day_4/uv.lock
 day_1/uv.lock
 day_4/.DS_Store
 .DS_Store
+
+.chainlit/

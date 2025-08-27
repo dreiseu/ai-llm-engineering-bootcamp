@@ -1,0 +1,7 @@
+{
+  "dependencies": ["."],
+  "graphs": {
+    "agent": "./app/agent_graph_with_helpfulness.py:build_agent_graph_with_helpfulness"
+  },
+  "env": ".env"
+}
